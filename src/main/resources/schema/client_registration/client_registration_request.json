@@ -1,0 +1,24 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "ClientRegistrationRequest",
+	"description": "Client registration request sent by the OAuth2 actor 'Client'; see https://tools.ietf.org/html/rfc6749#section-2",
+	"type": "object",
+	"properties": {
+		"clientType": {
+			"description": "Type of client; see https://tools.ietf.org/html/rfc6749#section-2.1",
+			"type": "string",
+			"enum": [
+				"confidential",
+				"public"
+			]
+		},
+		"redirectionEndpoint": {
+			"description": "The clients redirection endpoint; see https://tools.ietf.org/html/rfc6749#section-3.1.2",
+			"type": "string"
+		}
+	},
+	"required": [
+		"clientType",
+		"redirectionEndpoint"
+	]
+}

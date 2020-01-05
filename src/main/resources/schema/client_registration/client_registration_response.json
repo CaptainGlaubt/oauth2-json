@@ -1,0 +1,20 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "ClientRegistrationResponse",
+	"description": "Client registration response sent by the OAuth2 server; see https://tools.ietf.org/html/rfc6749#section-2",
+	"type": "object",
+	"properties": {
+		"clientId": {
+			"description": "The client identifier",
+			"type": "string"
+		},
+		"clientSecret": {
+			"description": "The client secret",
+			"type": "string"
+		}
+	},
+	"required": [
+		"clientType",
+		"redirectionEndpoint"
+	]
+}
